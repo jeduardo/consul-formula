@@ -13,10 +13,11 @@ consul-bin-dir:
 consul-user:
   group.present:
     - name: consul
+    - system: True
   user.present:
     - name: consul
-    - createhome: false
-    - system: true
+    - createhome: False
+    - system: True
     - groups:
       - consul
     - require:
